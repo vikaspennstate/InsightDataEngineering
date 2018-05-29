@@ -23,7 +23,7 @@ _The code is only provided for approach 2(that is preferred too) since i could h
 
 I shall discuss both approaches one by one.
 
-- First Approach:
+__First Approach:__
 
 Create a dictionary.
 
@@ -42,7 +42,7 @@ whenever a new line is read, look if this is in the dictionary:
     update dictionary item and also the file
     
 
-  -Drawbacks of above approach:
+-Drawbacks of above approach:
    
    + The main tenat of a distributed application is scalability and high availability. Since we are always stacking the dictionary and never removing the old data, lets say there are more than a million ip addresses that access our application. Having such a dictionary in memory may not be possible and we may have to keep some part in disk/cache which may result in page faults and bad performance.
 
@@ -50,7 +50,7 @@ whenever a new line is read, look if this is in the dictionary:
 
 
 
-- Second Approach:
+__Second Approach:__
 
 I created two data structures
 
