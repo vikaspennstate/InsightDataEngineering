@@ -44,7 +44,7 @@ whenever a new line is read, look if this is in the dictionary:
 
 -Drawbacks of above approach:
    
-   + The main tenat of a distributed application is scalability and high availability. Since we are always stacking the dictionary and never removing the old data, lets say there are more than a million ip addresses that access our application. Having such a dictionary in memory may not be possible and we may have to keep some part in disk/cache which may result in page faults and bad performance.
+   + The main tenet of a distributed application is scalability and high availability. Since we are always stacking the dictionary and never removing the old data, lets say there are more than a million ip addresses that access our application. Having such a dictionary in memory may not be possible and we may have to keep some part in disk/cache which may result in page faults and bad performance.
 
    + On each line read, we are required to update the file, and file connections resources are expensive. This will slow down each iteration by a constant time as compared to an approach that may write to file in bulk.
 
